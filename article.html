@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global News India</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .article {
+      background: #fff;
+      border-radius: 16px;
+      padding: 30px;
+      margin: 30px auto;
+      max-width: 850px;
+    }
+
+    .article h1 {
+      font-size: 40px;
+      line-height: 1.2;
+    }
+
+    .article-body {
+      font-size: 19px;
+      line-height: 1.8;
+    }
+
+    .meta {
+      color: #667085;
+      margin-bottom: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="top">
+  <div class="container header-row">
+    <a class="logo" href="index.html">
+      🌍 Global News India
+    </a>
+  </div>
+</header>
+
+<main class="container">
+
+  <article class="article" id="article">
+    खबर लोड हो रही है...
+  </article>
+
+</main>
+
+<script src="news.js"></script>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+
+  const news = NEWS.find(item => item.id === id);
+  const article = document.getElementById("article");
+
+  if (!news) {
+
+    article.innerHTML = `
+      <h1>खबर नहीं मिली</h1>
+      <a href="index.html">← होम पर जाएँ</a>
+    `;
+
+  } else {
+
+    article.innerHTML = `
+      <div class="category">${news.category}</div>
+
+      <h1>${news.title}</h1>
+
+      <div class="meta">
+        ${news.date} · स्रोत: ${news.source}
+      </div>
+
+      <div class="article-body">
+        <p>${news.body}</p>
+      </div>
+
+      <a href="index.html">← होम पर जाएँ</a>
+    `;
+  }
+</script>
+
+</body>
+  </html>
