@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="hi">
 <head>
   <meta charset="UTF-8">
@@ -6,7 +6,8 @@
 
   <title>Global News India</title>
 
-  <meta name="description" content="Global News India - हिंदी और English में विश्व, भारत, बिज़नेस, टेक्नोलॉजी, खेल और मनोरंजन की खबरें।">
+  <meta name="description"
+    content="Global News India - विश्व, भारत, बिजनेस, टेक्नोलॉजी और खेल की खबरें।">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -17,12 +18,12 @@
   <div class="container header-row">
 
     <a class="logo" href="index.html">
-      <span>🌍</span> Global News India
+      🌍 Global News India
     </a>
 
     <div class="actions">
       <button id="langBtn">English</button>
-      <button id="searchBtn" aria-label="Search">🔎</button>
+      <button id="searchBtn">🔎</button>
     </div>
 
   </div>
@@ -35,7 +36,7 @@
     <a href="index.html">होम</a>
     <a href="#world">विश्व</a>
     <a href="#india">भारत</a>
-    <a href="#business">बिज़नेस</a>
+    <a href="#business">बिजनेस</a>
     <a href="#tech">टेक्नोलॉजी</a>
     <a href="#sports">खेल</a>
     <a href="#entertainment">मनोरंजन</a>
@@ -51,7 +52,7 @@
     <strong>🔴 BREAKING NEWS</strong>
 
     <div id="ticker">
-      Global News India पर आपका स्वागत है — ताज़ा खबरों के लिए जुड़े रहें।
+      Global News India पर आपका स्वागत है।
     </div>
 
   </div>
@@ -60,8 +61,7 @@
 
 <main class="container">
 
-
-  <!-- HERO -->
+  <!-- TOP STORY -->
 
   <section class="hero">
 
@@ -69,18 +69,18 @@
 
       <span class="tag">TOP STORY</span>
 
-      <h1 id="headline">
+      <h1>
         दुनिया और भारत की प्रमुख खबरें एक ही जगह
       </h1>
 
-      <p id="summary">
-        यह आपकी नई द्विभाषी न्यूज़ वेबसाइट का शुरुआती होमपेज है।
-        विश्व, भारत, बिज़नेस और टेक्नोलॉजी की खबरें यहाँ पढ़ें।
+      <p>
+        Global News India पर विश्व, भारत, बिजनेस,
+        टेक्नोलॉजी और खेल से जुड़ी खबरें पढ़ें।
       </p>
 
-      <button class="read-btn" onclick="scrollToNews()">
-        ताज़ा खबरें देखें →
-      </button>
+      <a class="read-btn" href="#world">
+        खबरें देखें →
+      </a>
 
     </div>
 
@@ -113,9 +113,7 @@
 
     <h2>🌎 विश्व समाचार</h2>
 
-    <div class="cards" id="worldCards">
-      खबरें लोड हो रही हैं...
-    </div>
+    <div class="cards" id="worldCards"></div>
 
   </section>
 
@@ -126,9 +124,7 @@
 
     <h2>🇮🇳 भारत</h2>
 
-    <div class="cards" id="indiaCards">
-      खबरें लोड हो रही हैं...
-    </div>
+    <div class="cards" id="indiaCards"></div>
 
   </section>
 
@@ -137,11 +133,9 @@
 
   <section class="section" id="business">
 
-    <h2>💼 बिज़नेस</h2>
+    <h2>💼 बिजनेस</h2>
 
-    <div class="cards" id="businessCards">
-      खबरें लोड हो रही हैं...
-    </div>
+    <div class="cards" id="businessCards"></div>
 
   </section>
 
@@ -152,9 +146,7 @@
 
     <h2>💻 टेक्नोलॉजी</h2>
 
-    <div class="cards" id="techCards">
-      खबरें लोड हो रही हैं...
-    </div>
+    <div class="cards" id="techCards"></div>
 
   </section>
 
@@ -163,23 +155,18 @@
 
   <section class="section" id="sports">
 
-    <h2>🏆 खेल</h2>
+    <h2>🏏 खेल</h2>
 
     <div class="cards">
 
       <article class="card">
 
-        <div class="category">
-          खेल
-        </div>
+        <div class="category">खेल</div>
 
-        <h3>
-          खेल जगत की प्रमुख खबरें
-        </h3>
+        <h3>खेल जगत की प्रमुख खबरें</h3>
 
         <p>
-          क्रिकेट और अन्य खेलों से जुड़ी खबरें
-          जल्द यहाँ दिखाई जाएँगी।
+          क्रिकेट और अन्य खेलों से जुड़ी खबरें यहां पढ़ें।
         </p>
 
       </article>
@@ -199,17 +186,12 @@
 
       <article class="card">
 
-        <div class="category">
-          मनोरंजन
-        </div>
+        <div class="category">मनोरंजन</div>
 
-        <h3>
-          मनोरंजन जगत की खबरें
-        </h3>
+        <h3>मनोरंजन की ताज़ा जानकारी</h3>
 
         <p>
-          फिल्म, टीवी और मनोरंजन से जुड़ी खबरें
-          जल्द यहाँ दिखाई जाएँगी।
+          फिल्मों, टीवी और मनोरंजन की खबरें।
         </p>
 
       </article>
@@ -229,17 +211,12 @@
 
       <article class="card">
 
-        <div class="category">
-          विज्ञान
-        </div>
+        <div class="category">विज्ञान</div>
 
-        <h3>
-          विज्ञान और अंतरिक्ष की खबरें
-        </h3>
+        <h3>विज्ञान और अंतरिक्ष की खबरें</h3>
 
         <p>
-          विज्ञान, अंतरिक्ष और नई खोजों से जुड़ी
-          खबरें जल्द यहाँ दिखाई जाएँगी।
+          विज्ञान और नई खोजों से जुड़ी जानकारी।
         </p>
 
       </article>
@@ -256,7 +233,7 @@
     <h2>📩 न्यूज़ अपडेट पाएं</h2>
 
     <p>
-      ईमेल न्यूज़लेटर की सुविधा हम अगले चरण में जोड़ेंगे।
+      भविष्य में यहां ईमेल न्यूज़लेटर की सुविधा जोड़ी जाएगी।
     </p>
 
     <div class="subscribe">
@@ -303,116 +280,83 @@
 
 <script>
 
-  function showNews() {
+  const sections = {
 
-    const sections = {
+    "विश्व": "worldCards",
+    "भारत": "indiaCards",
+    "बिजनेस": "businessCards",
+    "टेक्नोलॉजी": "techCards"
 
-      "विश्व": "worldCards",
-
-      "भारत": "indiaCards",
-
-      "बिज़नेस": "businessCards",
-
-      "Тेक्नोलॉजी": "techCards"
-
-    };
+  };
 
 
-    Object.values(sections).forEach(function(id) {
+  NEWS.forEach(news => {
 
-      const element = document.getElementById(id);
+    const containerId = sections[news.category];
 
-      if (element) {
-        element.innerHTML = "";
-      }
-
-    });
-
-
-    if (typeof NEWS === "undefined") {
-
-      console.log("NEWS data नहीं मिली।");
-
+    if (!containerId) {
       return;
-
     }
 
 
-    NEWS.forEach(function(news) {
+    const container = document.getElementById(containerId);
 
-      const containerId = sections[news.category];
-
-      if (!containerId) {
-        return;
-      }
-
-
-      const container = document.getElementById(containerId);
-
-      if (!container) {
-        return;
-      }
-
-
-      container.innerHTML += `
-
-        <article class="card">
-
-          <div class="category">
-            ${news.category}
-          </div>
-
-          <h3>
-            ${news.title}
-          </h3>
-
-          <p>
-            ${news.body}
-          </p>
-
-          <small>
-            ${news.date} · ${news.source}
-          </small>
-
-          <br><br>
-
-          <a
-            class="read-btn"
-            href="article.html?id=${news.id}">
-            पूरी खबर पढ़ें →
-          </a>
-
-        </article>
-
-      `;
-
-    });
-
-  }
-
-
-  function scrollToNews() {
-
-    const world = document.getElementById("world");
-
-    if (world) {
-      world.scrollIntoView({
-        behavior: "smooth"
-      });
+    if (!container) {
+      return;
     }
 
-  }
+
+    const card = document.createElement("article");
+
+    card.className = "card";
 
 
-  showNews();
+    card.innerHTML = `
+
+      <img
+        src="${news.image}"
+        alt="${news.title}"
+        style="
+          width:100%;
+          height:190px;
+          object-fit:cover;
+          border-radius:12px;
+          margin-bottom:15px;
+        "
+      >
+
+      <div class="category">
+        ${news.category}
+      </div>
+
+      <h3>
+        ${news.title}
+      </h3>
+
+      <p>
+        ${news.body}
+      </p>
+
+      <a
+        class="read-btn"
+        href="article.html?id=${news.id}"
+      >
+        पूरी खबर पढ़ें →
+      </a>
+
+    `;
+
+
+    container.appendChild(card);
+
+  });
 
 </script>
 
 
-<!-- SEARCH + LANGUAGE -->
+<!-- SEARCH / LANGUAGE -->
 
 <script src="script.js"></script>
 
-
 </body>
-                          </html> 
+  </html>
