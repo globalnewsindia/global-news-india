@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Global News India</title>
+
   <link rel="stylesheet" href="style.css">
 
   <style>
@@ -15,9 +17,18 @@
       max-width: 850px;
     }
 
+    .article-image {
+      width: 100%;
+      max-height: 450px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin: 20px 0;
+    }
+
     .article h1 {
       font-size: 40px;
       line-height: 1.2;
+      margin-bottom: 15px;
     }
 
     .article-body {
@@ -27,7 +38,26 @@
 
     .meta {
       color: #667085;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
+    }
+
+    .source-link {
+      display: inline-block;
+      margin: 20px 0;
+      padding: 11px 16px;
+      background: #d71920;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 700;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #d71920;
+      text-decoration: none;
+      font-weight: 700;
     }
   </style>
 </head>
@@ -35,56 +65,109 @@
 <body>
 
 <header class="top">
+
   <div class="container header-row">
+
     <a class="logo" href="index.html">
       🌍 Global News India
     </a>
+
   </div>
+
 </header>
+
 
 <main class="container">
 
   <article class="article" id="article">
+
     खबर लोड हो रही है...
+
   </article>
 
 </main>
 
+
 <script src="news.js"></script>
 
+
 <script>
+
   const params = new URLSearchParams(window.location.search);
+
   const id = params.get("id");
 
   const news = NEWS.find(item => item.id === id);
+
   const article = document.getElementById("article");
+
 
   if (!news) {
 
     article.innerHTML = `
+
       <h1>खबर नहीं मिली</h1>
-      <a href="index.html">← होम पर जाएँ</a>
+
+      <p>
+        यह खबर उपलब्ध नहीं है।
+      </p>
+
+      <a class="back-link" href="index.html">
+        ← होम पर जाएँ
+      </a>
+
     `;
 
   } else {
 
     article.innerHTML = `
-      <div class="category">${news.category}</div>
 
-      <h1>${news.title}</h1>
+      <div class="category">
+        ${news.category}
+      </div>
+
+      <h1>
+        ${news.title}
+      </h1>
 
       <div class="meta">
         ${news.date} · स्रोत: ${news.source}
       </div>
 
+      <img
+        class="article-image"
+        src="${news.image}"
+        alt="${news.title}"
+      >
+
       <div class="article-body">
-        <p>${news.body}</p>
+
+        <p>
+          ${news.body}
+        </p>
+
       </div>
 
-      <a href="index.html">← होम पर जाएँ</a>
+      <a
+        class="source-link"
+        href="${news.sourceUrl}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🔗 मूल स्रोत देखें
+      </a>
+
+      <br>
+
+      <a class="back-link" href="index.html">
+        ← होम पर जाएँ
+      </a>
+
     `;
+
   }
+
 </script>
 
 </body>
-  </html>
+</html>
